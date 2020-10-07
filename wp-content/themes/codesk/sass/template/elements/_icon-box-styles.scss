@@ -1,0 +1,165 @@
+.gsc-icon-box-styles{
+  &.style-1{
+    position: relative;
+    @include clearfix();
+    text-align: left;
+    .icon-box-top{
+      display: table;
+      .icon-inner{
+        display: inline-block;
+        position: relative;
+        display: table-cell;
+        padding-right: 15px;
+        vertical-align: middle;
+        a{
+          display: inline-block;
+        }
+      }
+      .box-icon{
+        display: inline-block;
+        i{
+          color: $theme-color;
+        }
+        svg{
+          fill: $theme-color;
+          height: auto;
+          transition: all 0.35s;
+        }
+      }
+      .title{
+        font-size: 20px; 
+        letter-spacing: 0;
+        font-weight: 700;
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+    &:hover{
+      .icon-inner{
+        .box-icon{
+          svg, i{
+            animation: beat 1.5s ease 0s infinite;
+          }
+        }
+      }
+    }
+  }
+  &.style-2{
+    position: relative;
+    @include clearfix();
+    text-align: left;
+    .icon-box-inner{
+      display: table;
+      margin-bottom: 25px;
+      @include media-breakpoint-down(md){
+        display: block;
+        width: 100%;
+      }
+      .icon-box-left{
+        display: inline-block;
+        position: relative;
+        display: table-cell;
+        padding-right: 15px;
+        vertical-align: top;
+        @include media-breakpoint-down(md){
+          width: 100%;
+          display: block;
+          padding-right: 0!important;
+          padding-bottom: 20px;
+        }
+      }
+      .box-icon{
+        display: inline-block;
+        i{
+          color: $theme-color;
+        }
+        svg{
+          fill: $theme-color;
+          height: auto;
+          transition: all 0.35s;
+        }
+      }
+    }
+    .icon-box-right{
+      .title{
+        color: $black;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.4;
+        margin-top: 0;
+        display: block;
+        @include media-breakpoint-down(md){
+          width: 100%;
+          display: block;
+        }
+      }
+      .content-inner{
+        margin-top: 40px;
+        padding-top: 40px;
+        position: relative;
+        .desc{
+          font-weight: 500;
+        }
+      }
+    }
+    &:hover{
+      .icon-inner{
+        .box-icon{
+          svg, i{
+            animation: beat 1.5s ease 0s infinite;
+          }
+        }
+      }
+    }
+  }
+  &.style-3{
+    position: relative;
+    @include clearfix();
+    text-align: left;
+    background: $white;
+    padding: 50px 35px;
+    border: 1px solid $border-color;
+    @include media-breakpoint-down(lg){
+      padding: 50px 25px;
+    }
+    @include media-breakpoint-down(md){
+      padding: 35px 20px;
+    }
+    .icon-inner{
+      display: inline-block;
+      position: relative;
+    }
+    .box-icon{
+      display: inline-block;
+      i{
+        color: $theme-color;
+      }
+      svg{
+        fill: $theme-color;
+        height: auto;
+        transition: all 0.35s;
+      }
+    }
+    .title{
+      color: $black;
+      font-size: 22px;
+      font-weight: 700;
+      display: block;
+      line-height: 1.4;
+      margin-bottom: 0;
+    }
+    .content-inner{
+      margin-top: 20px;
+      position: relative;
+    }
+    &:hover{
+      .icon-inner{
+        .box-icon{
+          svg, i{
+            animation: beat 1.5s ease 0s infinite;
+          }
+        }
+      }
+    }
+  }
+}

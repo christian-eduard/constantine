@@ -1,0 +1,77 @@
+.gsc-video-box{
+  position: relative;
+  &.style-1{
+    .video-inner{
+      .popup-video{
+        display: block;
+        bottom: 0;
+        left: 0;
+        @include size(115px, 115px);
+        line-height: 115px;
+        text-align: center;
+        font-size: 40px;
+        background: $theme-color;
+        z-index: 11; 
+        color: $white;
+        position: relative;
+        @include scale(1);
+        transition: all 0.35s;
+        @include media-breakpoint-down(lg){
+          @include size(100px, 100px);
+          line-height: 100px;
+        }
+        @include media-breakpoint-down(md){
+          @include size(90px, 90px);
+          line-height: 90px;
+        }
+        @include media-breakpoint-down(sm){
+          @include size(60px, 60px);
+          line-height: 60px;
+        }
+        span{
+          position: relative;
+          z-index: 9;
+        }
+        &:after{
+          content: '';
+          @include size(2px, 100%);
+          background: $white;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          transition: all 0.35s;
+        }
+        &:hover{
+          color: $black;
+          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+          @include scale(0.8);
+          i{
+            color: $black;
+          }
+          &:after{ 
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  &.style-2{
+      .video-inner{
+        .video-image{
+          float: left;
+          position: relative;
+          width: 100%;
+          .video-action{
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            z-index: 11;
+            margin-top: -23px;
+            text-align: center;
+          }
+        }
+      }
+  }
+}

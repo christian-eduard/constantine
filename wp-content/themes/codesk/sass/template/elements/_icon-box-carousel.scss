@@ -1,0 +1,103 @@
+.gsc-icon-box-carousel{
+   &.style-1{
+      .icon-box-item-inner{
+         position: relative;
+         @include clearfix();
+         text-align: left;
+         background: $white;
+         padding: 50px 35px;
+         border: 1px solid $border-color;
+         margin: 0 auto;
+         .icon-inner{
+            display: inline-block;
+            position: relative;
+         }
+         .box-icon{
+            display: inline-block;
+            i{
+              color: $theme-color;
+            }
+            svg{
+              fill: $theme-color;
+              height: auto;
+              transition: all 0.35s;
+            }
+         }
+         .title{
+            color: $black;
+            font-size: 22px;
+            font-weight: 700;
+            display: block;
+            line-height: 1.4;
+            margin-bottom: 0;
+         }
+         .content-inner{
+            margin-top: 20px;
+            position: relative;
+         }
+         &:hover{
+            .icon-inner{
+              .box-icon{
+                svg, i{
+                  animation: beat 1.5s ease 0s infinite;
+                }
+              }
+            }
+         }
+      }
+   }
+   &.style-2{
+      .icon-box-item-content{
+         text-align: center;
+         background: $white;
+         transition: all 0.35s;
+         margin-bottom: 20px;
+         position: relative;
+         border: 1px solid $border-color;
+         padding: 50px;
+         &:after{
+            content: '';
+            @include size(100%, 4px);
+            border-top: 1px solid $border-color;
+            background: $white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            transition: all 0.35s;
+         }
+         .box-icon{
+            position: relative;
+            margin: 0 auto;
+         }
+         .title{
+            font-size: 20px;
+            font-weight: 700;
+            margin: 30px 0 20px;
+            color: $headings-color;
+            
+         }
+         .action{
+            margin-top: 30px;
+            .link-action{
+               @include size(40px, 40px);
+               background: #EEF1F6;
+               text-align: center;
+               line-height: 42px;
+               display: inline-block;
+               font-size: 14px;
+            }
+         }
+         .link-overlay{
+            position: absolute;
+            @include size(100%, 100%);
+            top: 0;
+            left: 0;
+            z-index: 11;            
+         }
+         &:hover{
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+         }
+      }
+   }
+}
